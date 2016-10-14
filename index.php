@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Vue js Example</title>
-    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap.min.css">
-    <script type="text/javascript" src="assets/libs/vue.js"></script>
-</head>
-<body>
-    <div class="container">
+<?php include_once "header.php" ?>
         <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
@@ -51,7 +43,7 @@
             <div class="col-md-4" v-for="col in cols">
               <h2>{{col.title}}</h2>
               <p>{{col.text}}</p>
-              <p><a class="btn btn-default" v-on:click="add_msg" href="javascript:void(0);" role="button">{{col.link}}</a></p>
+              <p><a class="btn btn-default" v-on:click="add_msg(col)" href="javascript:void(0);" role="button">{{col.link}}</a></p>
             </div>
           </div>
 
@@ -65,13 +57,4 @@
         <!-- ******* -->
 
         <hr>
-      <footer>
-          <!-- Version 3.1.0 and minified JQuery -->
-          <script type="text/javascript" src="assets/libs/jquery.min.js"></script>
-          <!-- Latest compiled and minified JavaScript -->
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-          <script type="text/javascript" src="assets/js/main.js"></script>
-      </footer>
-    </div>
-</body>
-</html>
+<?php include_once "footer.php" ?>

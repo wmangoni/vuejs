@@ -3,7 +3,7 @@
 <head>
     <title>Vue js Example</title>
     <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/libs/vue.js">
+    <script type="text/javascript" src="assets/libs/vue.js"></script>
 </head>
 <body>
     <div class="container">
@@ -33,11 +33,11 @@
         </nav>
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
+        <div class="jumbotron" id="jumbotron">
           <div class="container">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            <h1>{{title}}</h1>
+            <p>{{text}}</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">{{link}}</a></p>
           </div>
         </div>
 

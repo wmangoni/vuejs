@@ -44,7 +44,8 @@
           </div>
         </div>
 
-        <div class="container" id="loop">
+      <div class="container" id="loop">
+        <section>
           <!-- Example row of columns -->
           <div class="row">
             <div class="col-md-4" v-for="col in cols">
@@ -54,14 +55,23 @@
             </div>
           </div>
 
-          <hr>
-        <footer>
-            <!-- Version 3.1.0 and minified JQuery -->
-            <script type="text/javascript" src="assets/libs/jquery.min.js"></script>
-            <!-- Latest compiled and minified JavaScript -->
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-            <script type="text/javascript" src="assets/js/main.js"></script>
-        </footer>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- component template -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ******* -->
+
+        <hr>
+      <footer>
+          <!-- Version 3.1.0 and minified JQuery -->
+          <script type="text/javascript" src="assets/libs/jquery.min.js"></script>
+          <!-- Latest compiled and minified JavaScript -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+          <script type="text/javascript" src="assets/js/main.js"></script>
+      </footer>
     </div>
 </body>
 </html>

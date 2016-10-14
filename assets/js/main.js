@@ -13,27 +13,26 @@ var app = new Vue({
         text: 'This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.',
         link: 'Learn more',
         itens: [
-        	{text: 'Maça'},
-        	{text: 'Banana'},
-        	{text: 'Uva'},
-        	{text: 'Morango'}
+          {text: 'Maça'},
+          {text: 'Banana'},
+          {text: 'Uva'},
+          {text: 'Morango'}
         ]
     }
 })
 
 var loop = new Vue({
-	el: '#loop',
-	data: {
-		cols: [
-  			{ title: 'Meu titulo', text: '1 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.', link: 'Detalhes' },
-  			{ title: 'Meu titulo', text: '2 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.', link: 'Detalhes' },
-  			{ title: 'Meu titulo', text: '3 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.', link: 'Detalhes' }
-		]
-	},
-	methods: {
-		add_msg: function () {
-			console.log(this.cols[1].title);
-  			//this.title += 'adfsaaaaaaa';
-		}
-	}
+  el: '#loop',
+  data: {
+    cols: [
+        { title: 'Meu titulo', text: '1 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.', link: 'Detalhes' },
+        { title: 'Meu titulo', text: '2 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.', link: 'Detalhes' },
+        { title: 'Meu titulo', text: '3 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.', link: 'Detalhes' }
+    ]
+  },
+  methods: {
+    add_msg: function () {
+      alert(this.cols[1].title);
+    }
+  }
 })

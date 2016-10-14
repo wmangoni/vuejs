@@ -26,7 +26,7 @@
                 <div class="form-group">
                   <input type="password" placeholder="Password" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
+                <button class="btn btn-success">Sign in</button>
               </form>
             </div><!--/.navbar-collapse -->
           </div>
@@ -37,27 +37,20 @@
           <div class="container">
             <h1>{{title}}</h1>
             <p>{{text}}</p>
+            <ol style="padding-left: 20px; margin-bottom: 30px;">
+              <list-itens v-for="item in itens" v-bind:item="item"></list-itens>
+            </ol>
             <p><a class="btn btn-primary btn-lg" href="#" role="button">{{link}}</a></p>
           </div>
         </div>
 
-        <div class="container">
+        <div class="container" id="loop">
           <!-- Example row of columns -->
           <div class="row">
-            <div class="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-           </div>
-            <div class="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <div class="col-md-4" v-for="col in cols">
+              <h2>{{col.title}}</h2>
+              <p>{{col.text}}</p>
+              <p><a class="btn btn-default" v-on:click="add_msg" href="javascript:void(0);" role="button">{{col.link}}</a></p>
             </div>
           </div>
 

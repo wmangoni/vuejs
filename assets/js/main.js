@@ -1,10 +1,3 @@
-Vue.component('list-itens', {
-  // The todo-item component now accepts a
-  // "prop", which is like a custom attribute.
-  // This prop is called todo.
-  props: ['item'],
-  template: '<li>{{ item.text }}</li>'
-})
 
 var app = new Vue({
     el: '#jumbotron',
@@ -17,8 +10,34 @@ var app = new Vue({
           {text: 'Banana'},
           {text: 'Uva'},
           {text: 'Morango'}
-        ]
-    }
+        ],
+		newElement: '',
+		editFlag: false,
+		index: 0
+    },
+	methods: {
+		addElement: function() {
+			console.log(this.newElement);
+			var text = this.newElement.trim();
+			if (this.editFlag) {
+				this.itens[this.index].text = text;
+				this.editFlag = false;
+			} else {
+				this.itens.push({text:text});
+			}
+			this.newElement = '';
+		},
+		editElement: function(e) {
+			for(var i = 0; i < this.itens.length; i++){
+				if(this.itens[i].text == e.text){
+					this.index = i;
+					break;
+				}
+			}
+			this.editFlag = true;
+			this.newElement = e.text;
+		}
+	}
 })
 
 var loop = new Vue({

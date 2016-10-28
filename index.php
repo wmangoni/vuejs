@@ -30,8 +30,11 @@
             <h1>{{title}}</h1>
             <p>{{text}}</p>
             <ol style="padding-left: 20px; margin-bottom: 30px;">
-              <list-itens v-for="item in itens" v-bind:item="item"></list-itens>
+              <li v-for="item in itens"><a href="#" @click="editElement(item)">{{item.text}}</a></li>
             </ol>
+			<br>
+			<input class="form-control" type="text" v-model="newElement" @keyup.enter="addElement">
+			<br>
             <p><a class="btn btn-primary btn-lg" href="#" role="button">{{link}}</a></p>
           </div>
         </div>
